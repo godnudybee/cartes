@@ -1,0 +1,2 @@
+class Carte < ApplicationRecord
+end

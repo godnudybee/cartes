@@ -1,0 +1,2 @@
+class Historiqueechec < ApplicationRecord
+end

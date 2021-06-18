@@ -1,0 +1,51 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  card_id: MyString
+  masked_pan: MyString
+  card_id: MyString
+  card_balance: 9.99
+  card_holder: MyString
+  billing_name: MyString
+  billing_address: MyString
+  billing_city: MyString
+  billing_country: MyString
+  billing_zip_code: MyString
+  card_currency: MyString
+  status: MyString
+  success: MyString
+  billing_address: MyString
+  billing_city: MyString
+  billing_state: MyString
+  zip_code: MyString
+  card_holder: MyString
+  card_pan: MyString
+  cvv: MyString
+  cardcurrency: MyString
+  cardbalance: 9.99
+  expiration: MyString
+
+two:
+  card_id: MyString
+  masked_pan: MyString
+  card_id: MyString
+  card_balance: 9.99
+  card_holder: MyString
+  billing_name: MyString
+  billing_address: MyString
+  billing_city: MyString
+  billing_country: MyString
+  billing_zip_code: MyString
+  card_currency: MyString
+  status: MyString
+  success: MyString
+  billing_address: MyString
+  billing_city: MyString
+  billing_state: MyString
+  zip_code: MyString
+  card_holder: MyString
+  card_pan: MyString
+  cvv: MyString
+  cardcurrency: MyString
+  cardbalance: 9.99
+  expiration: MyString

@@ -1,0 +1,59 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  transactionId: 1
+  carte_id: 1
+  transactionAmount: 9.99
+  fee: 1
+  productName: MyString
+  providerResponseCode: MyString
+  providerResponseMessage: MyString
+  providerReference: MyString
+  transactionReference: MyString
+  uniqueReferenceDetails: MyString
+  status: 1
+  productId: 9.99
+  uniqueReference: MyString
+  paymentReference: MyString
+  paymentType: MyString
+  paymentResponseCoe: MyString
+  paymentResponseMessage: MyString
+  amountConfirmed: 1
+  currencyId: 1
+  narration: MyString
+  indicator: MyString
+  dateCreated: MyString
+  statusName: MyString
+  description: MyString
+  currency: MyString
+  merchantName: MyString
+  transactionDescription: MyString
+
+two:
+  transactionId: 1
+  carte_id: 1
+  transactionAmount: 9.99
+  fee: 1
+  productName: MyString
+  providerResponseCode: MyString
+  providerResponseMessage: MyString
+  providerReference: MyString
+  transactionReference: MyString
+  uniqueReferenceDetails: MyString
+  status: 1
+  productId: 9.99
+  uniqueReference: MyString
+  paymentReference: MyString
+  paymentType: MyString
+  paymentResponseCoe: MyString
+  paymentResponseMessage: MyString
+  amountConfirmed: 1
+  currencyId: 1
+  narration: MyString
+  indicator: MyString
+  dateCreated: MyString
+  statusName: MyString
+  description: MyString
+  currency: MyString
+  merchantName: MyString
+  transactionDescription: MyString

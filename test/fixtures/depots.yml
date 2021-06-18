@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pmt_pg_id: 1
+  montant_usd: 9.99
+  card_id: MyString
+
+two:
+  pmt_pg_id: 1
+  montant_usd: 9.99
+  card_id: MyString

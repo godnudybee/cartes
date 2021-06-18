@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  desc_operation: MyString
+  info_json: MyString
+  pmtpg_id: 1
+
+two:
+  desc_operation: MyString
+  info_json: MyString
+  pmtpg_id: 1

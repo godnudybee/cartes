@@ -1,0 +1,2 @@
+class AddActiveToCarte < ApplicationRecord
+end

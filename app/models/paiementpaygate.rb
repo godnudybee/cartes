@@ -1,0 +1,2 @@
+class Paiementpaygate < ApplicationRecord
+end

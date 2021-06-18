@@ -1,0 +1,2 @@
+class Infotype < ApplicationRecord
+end

@@ -1,0 +1,897 @@
+Started POST "/retour" for ::1 at 2021-06-15 18:29:45 +0000
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/retour"):
+  
+Started POST "/retour" for ::1 at 2021-06-15 18:30:43 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/retour"):
+  
+Started POST "/retour" for ::1 at 2021-06-15 18:31:21 +0000
+Processing by TstController#retour as */*
+  Parameters: {"j"=>"12", "tst"=>{"j"=>"12"}}
+Completed 200 OK in 46ms (Views: 0.4ms | Allocations: 4151)
+
+
+  [1m[35m (34.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (144.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (111.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOtps (20210615184115)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "otps" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "phone" varchar, "code" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210615184115"]]
+  [1m[36mTRANSACTION (140.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCartes (20210615184513)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCartes (20210615184513)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "cartes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "card_id" varchar, "masked_pan" varchar, "card_balance" decimal, "card_holder" varchar, "card_pan" varchar, "cardcurrency" varchar, "cardbalance" decimal, "billing_name" varchar, "billing_address" varchar, "billing_city" varchar, "billing_country" varchar, "billing_zip_code" varchar, "billing_state" varchar, "card_currency" varchar, "status" varchar, "success" varchar, "zip_code" varchar, "cvv" varchar, "expiration" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210615184513"]]
+  [1m[36mTRANSACTION (103.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTransactions (20210615185208)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "transactionId" integer, "carte_id" integer, "transactionAmount" decimal, "fee" integer, "productName" varchar, "providerResponseCode" varchar, "providerResponseMessage" varchar, "providerReference" varchar, "transactionReference" varchar, "uniqueReferenceDetails" varchar, "status" integer, "productId" decimal, "uniqueReference" varchar, "paymentReference" varchar, "paymentType" varchar, "paymentResponseCoe" varchar, "paymentResponseMessage" varchar, "amountConfirmed" integer, "currencyId" integer, "narration" varchar, "indicator" varchar, "dateCreated" varchar, "statusName" varchar, "description" varchar, "currency" varchar, "merchantName" varchar, "transactionDescription" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210615185208"]]
+  [1m[36mTRANSACTION (127.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCardStates (20210615185325)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "card_states" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "carte_id" integer, "status" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210615185325"]]
+  [1m[36mTRANSACTION (145.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20210615185432)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "phone" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210615185432"]]
+  [1m[36mTRANSACTION (161.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-16 12:33:35.517087"], ["updated_at", "2021-06-16 12:33:35.517087"]]
+  [1m[36mTRANSACTION (137.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["phone", "22891367306"], ["password_digest", "p"], ["created_at", "2021-06-16 12:33:49.553705"], ["updated_at", "2021-06-16 12:33:49.553705"]]
+  [1m[36mTRANSACTION (128.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["phone", "22896644879"], ["password_digest", "y"], ["created_at", "2021-06-16 12:34:17.719308"], ["updated_at", "2021-06-16 12:34:17.719308"]]
+  [1m[36mTRANSACTION (127.9ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/verify_credentials" for ::1 at 2021-06-16 12:35:25 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#verify_credentials as */*
+  Parameters: {"phone"=>"22891367306", "password_digest"=>"[FILTERED]", "user"=>{"phone"=>"22891367306", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "22891367306"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `verify_credentials'
+Completed 200 OK in 183ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 6022)
+
+
+Started POST "/verify_credentials" for ::1 at 2021-06-16 12:36:07 +0000
+Processing by UsersController#verify_credentials as TEXT
+  Parameters: {"phone"=>"22891367306", "password_digest"=>"[FILTERED]", "user"=>{"phone"=>"22891367306", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "22891367306"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `verify_credentials'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 485)
+
+
+Started POST "/verify_credentials" for ::1 at 2021-06-16 12:37:17 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#verify_credentials as TEXT
+  Parameters: {"phone"=>"22891367306", "password_digest"=>"[FILTERED]", "user"=>{"phone"=>"22891367306", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "22891367306"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `verify_credentials'
+Completed 200 OK in 16ms (Views: 7.5ms | ActiveRecord: 2.8ms | Allocations: 2496)
+
+
+Started POST "/verify_credentials" for ::1 at 2021-06-16 12:37:39 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#verify_credentials as TEXT
+  Parameters: {"phone"=>"22891367306", "password_digest"=>"[FILTERED]", "user"=>{"phone"=>"22891367306", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "22891367306"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `verify_credentials'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 3.2ms | Allocations: 2447)
+
+
+Started POST "/verify_credentials" for ::1 at 2021-06-16 12:37:44 +0000
+Processing by UsersController#verify_credentials as TEXT
+  Parameters: {"phone"=>"22891367306", "password_digest"=>"[FILTERED]", "user"=>{"phone"=>"22891367306", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "22891367306"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `verify_credentials'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 483)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToCartes (20210616124220)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (39.9ms)[0m  [1m[35mALTER TABLE "cartes" ADD "user_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210616124220"]]
+  [1m[36mTRANSACTION (132.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/verify_credentials" for ::1 at 2021-06-16 12:44:34 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#verify_credentials as TEXT
+  Parameters: {"phone"=>"22891367306", "password_digest"=>"[FILTERED]", "user"=>{"phone"=>"22891367306", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "22891367306"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `verify_credentials'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 2336)
+
+
+Started POST "/verify_credentials" for ::1 at 2021-06-16 12:45:14 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#verify_credentials as TEXT
+  Parameters: {"phone"=>"22891367306", "password_digest"=>"[FILTERED]", "user"=>{"phone"=>"22891367306", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "22891367306"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `verify_credentials'
+Redirected to 
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.8ms | Allocations: 3516)
+
+
+  
+NoMethodError (undefined method `to_model' for 1:Integer
+Did you mean?  to_yaml):
+  
+app/controllers/users_controller.rb:16:in `verify_credentials'
+Started POST "/verify_credentials" for ::1 at 2021-06-16 12:45:52 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#verify_credentials as TEXT
+  Parameters: {"phone"=>"22891367306", "password_digest"=>"[FILTERED]", "user"=>{"phone"=>"22891367306", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "22891367306"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `verify_credentials'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 3.1ms | Allocations: 2473)
+
+
+  
+NoMethodError (undefined method `empty?' for 1:Integer):
+  
+rack (2.2.3) lib/rack/etag.rb:69:in `block in digest_body'
+actionpack (6.1.3.2) lib/action_dispatch/http/response.rb:158:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/http/response.rb:158:in `each_chunk'
+actionpack (6.1.3.2) lib/action_dispatch/http/response.rb:140:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/http/response.rb:76:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/http/response.rb:493:in `each'
+rack (2.2.3) lib/rack/etag.rb:67:in `digest_body'
+rack (2.2.3) lib/rack/etag.rb:31:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/verify_credentials" for ::1 at 2021-06-16 12:45:54 +0000
+Processing by UsersController#verify_credentials as TEXT
+  Parameters: {"phone"=>"22891367306", "password_digest"=>"[FILTERED]", "user"=>{"phone"=>"22891367306", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "22891367306"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `verify_credentials'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 463)
+
+
+  
+NoMethodError (undefined method `empty?' for 1:Integer):
+  
+rack (2.2.3) lib/rack/etag.rb:69:in `block in digest_body'
+actionpack (6.1.3.2) lib/action_dispatch/http/response.rb:158:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/http/response.rb:158:in `each_chunk'
+actionpack (6.1.3.2) lib/action_dispatch/http/response.rb:140:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/http/response.rb:76:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/http/response.rb:493:in `each'
+rack (2.2.3) lib/rack/etag.rb:67:in `digest_body'
+rack (2.2.3) lib/rack/etag.rb:31:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/verify_credentials" for ::1 at 2021-06-16 12:46:22 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#verify_credentials as TEXT
+  Parameters: {"phone"=>"22891367306", "password_digest"=>"[FILTERED]", "user"=>{"phone"=>"22891367306", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "22891367306"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `verify_credentials'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 2456)
+
+
+Started POST "/verify_credentials" for ::1 at 2021-06-16 12:46:42 +0000
+Processing by UsersController#verify_credentials as TEXT
+  Parameters: {"phone"=>"22891367346", "password_digest"=>"[FILTERED]", "user"=>{"phone"=>"22891367346", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "22891367346"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `verify_credentials'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 466)
+
+
+Started POST "/envoi_otp" for ::1 at 2021-06-16 13:24:51 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#envoi_otp as TEXT
+  Parameters: {"phone"=>"22891367346", "password_digest"=>"[FILTERED]", "otp"=>{"phone"=>"22891367346"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? LIMIT ?[0m  [["phone", "22891367346"], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:28:in `envoi_otp'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/otps_controller.rb:36:in `envoi_otp'
+  [1m[36mOtp Create (1.9ms)[0m  [1m[32mINSERT INTO "otps" ("phone", "code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["phone", "22891367346"], ["code", 108057], ["created_at", "2021-06-16 13:24:51.548143"], ["updated_at", "2021-06-16 13:24:51.548143"]]
+  ↳ app/controllers/otps_controller.rb:36:in `envoi_otp'
+  [1m[36mTRANSACTION (97.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/otps_controller.rb:36:in `envoi_otp'
+Completed 204 No Content in 124ms (ActiveRecord: 102.4ms | Allocations: 4174)
+
+
+Started POST "/envoi_otp" for ::1 at 2021-06-16 13:31:05 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#envoi_otp as TEXT
+  Parameters: {"phone"=>"22891367346", "password_digest"=>"[FILTERED]", "otp"=>{"phone"=>"22891367346"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? LIMIT ?[0m  [["phone", "22891367346"], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:31:in `envoi_otp'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mOtp Update (1.8ms)[0m  [1m[33mUPDATE "otps" SET "code" = ?, "updated_at" = ? WHERE "otps"."id" = ?[0m  [["code", 247870], ["updated_at", "2021-06-16 13:31:05.425185"], ["id", 1]]
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mTRANSACTION (121.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 124.7ms | Allocations: 3959)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 3)):
+  
+app/controllers/otps_controller.rb:5:in `sms_alert'
+app/controllers/otps_controller.rb:40:in `envoi_otp'
+Started POST "/envoi_otp" for ::1 at 2021-06-16 13:31:44 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#envoi_otp as TEXT
+  Parameters: {"phone"=>"22891367346", "password_digest"=>"[FILTERED]", "otp"=>{"phone"=>"22891367346"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? LIMIT ?[0m  [["phone", "22891367346"], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:31:in `envoi_otp'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mOtp Update (1.4ms)[0m  [1m[33mUPDATE "otps" SET "code" = ?, "updated_at" = ? WHERE "otps"."id" = ?[0m  [["code", 409401], ["updated_at", "2021-06-16 13:31:44.673921"], ["id", 1]]
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mTRANSACTION (108.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+Completed 200 OK in 424ms (Views: 0.4ms | ActiveRecord: 113.8ms | Allocations: 4472)
+
+
+Started POST "/envoi_otp" for ::1 at 2021-06-16 13:32:28 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#envoi_otp as TEXT
+  Parameters: {"phone"=>"22891367346", "password_digest"=>"[FILTERED]", "otp"=>{"phone"=>"22891367346"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? LIMIT ?[0m  [["phone", "22891367346"], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:31:in `envoi_otp'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mOtp Update (1.4ms)[0m  [1m[33mUPDATE "otps" SET "code" = ?, "updated_at" = ? WHERE "otps"."id" = ?[0m  [["code", 925342], ["updated_at", "2021-06-16 13:32:29.305876"], ["id", 1]]
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mTRANSACTION (183.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+Completed 200 OK in 471ms (Views: 0.3ms | ActiveRecord: 187.6ms | Allocations: 4488)
+
+
+Started POST "/envoi_otp" for ::1 at 2021-06-16 13:34:19 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#envoi_otp as TEXT
+  Parameters: {"phone"=>"91367346", "password_digest"=>"[FILTERED]", "otp"=>{"phone"=>"91367346"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? LIMIT ?[0m  [["phone", "91367346"], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:31:in `envoi_otp'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mOtp Create (1.7ms)[0m  [1m[32mINSERT INTO "otps" ("phone", "code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["phone", "91367346"], ["code", 444440], ["created_at", "2021-06-16 13:34:19.857744"], ["updated_at", "2021-06-16 13:34:19.857744"]]
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mTRANSACTION (281.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+Completed 200 OK in 576ms (Views: 0.7ms | ActiveRecord: 286.6ms | Allocations: 4419)
+
+
+Started POST "/envoi_otp" for ::1 at 2021-06-16 13:37:38 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#envoi_otp as TEXT
+  Parameters: {"phone"=>"91367346", "password_digest"=>"[FILTERED]", "otp"=>{"phone"=>"91367346"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? LIMIT ?[0m  [["phone", "91367346"], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:31:in `envoi_otp'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mOtp Update (1.4ms)[0m  [1m[33mUPDATE "otps" SET "code" = ?, "updated_at" = ? WHERE "otps"."id" = ?[0m  [["code", 940736], ["updated_at", "2021-06-16 13:37:38.710065"], ["id", 2]]
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mTRANSACTION (90.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+Completed 200 OK in 1114ms (Views: 1.0ms | ActiveRecord: 94.6ms | Allocations: 4466)
+
+
+Started POST "/envoi_otp" for ::1 at 2021-06-16 13:38:08 +0000
+Processing by OtpsController#envoi_otp as TEXT
+  Parameters: {"phone"=>"91367306", "password_digest"=>"[FILTERED]", "otp"=>{"phone"=>"91367306"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? LIMIT ?[0m  [["phone", "91367306"], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:31:in `envoi_otp'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mOtp Create (22.3ms)[0m  [1m[32mINSERT INTO "otps" ("phone", "code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["phone", "91367306"], ["code", 191869], ["created_at", "2021-06-16 13:38:08.134853"], ["updated_at", "2021-06-16 13:38:08.134853"]]
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mTRANSACTION (98.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+Completed 200 OK in 404ms (Views: 0.8ms | ActiveRecord: 121.4ms | Allocations: 2459)
+
+
+Started POST "/envoi_otp" for ::1 at 2021-06-16 13:38:51 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#envoi_otp as TEXT
+  Parameters: {"phone"=>"93708315", "password_digest"=>"[FILTERED]", "otp"=>{"phone"=>"93708315"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? LIMIT ?[0m  [["phone", "93708315"], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:31:in `envoi_otp'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mOtp Create (1.4ms)[0m  [1m[32mINSERT INTO "otps" ("phone", "code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["phone", "93708315"], ["code", 16860], ["created_at", "2021-06-16 13:38:51.873943"], ["updated_at", "2021-06-16 13:38:51.873943"]]
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+  [1m[36mTRANSACTION (113.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/otps_controller.rb:39:in `envoi_otp'
+Completed 200 OK in 1107ms (Views: 0.4ms | ActiveRecord: 117.3ms | Allocations: 4417)
+
+
+Started POST "/create_user" for ::1 at 2021-06-16 13:50:40 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as TEXT
+  Parameters: {"phone"=>"93708315", "password_digest"=>"[FILTERED]", "user"=>{"phone"=>"93708315", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "93708315"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.1ms | Allocations: 2418)
+
+
+  
+NameError (undefined local variable or method `le_phone' for #<UsersController:0x00000000011d78>):
+  
+app/controllers/users_controller.rb:23:in `create'
+Started POST "/create_user" for ::1 at 2021-06-16 13:51:04 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as TEXT
+  Parameters: {"phone"=>"93708315", "password_digest"=>"[FILTERED]", "user"=>{"phone"=>"93708315", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."phone" = ? LIMIT ?[0m  [["phone", "93708315"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `create'
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["phone", "93708315"], ["password_digest", "togovabien"], ["created_at", "2021-06-16 13:51:04.397059"], ["updated_at", "2021-06-16 13:51:04.397059"]]
+  ↳ app/controllers/users_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (122.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `create'
+Completed 200 OK in 151ms (Views: 0.6ms | ActiveRecord: 127.0ms | Allocations: 4032)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:29:39 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 1.7ms | Allocations: 169)
+
+
+  
+ArgumentError (You have passed Hash object to #and. Pass an ActiveRecord::Relation object instead.):
+  
+app/controllers/otps_controller.rb:51:in `verify_otp'
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:32:21 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:29:21.515601') AND (updated_at <= '2021-06-16 14:32:21.528834') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 65ms (Views: 0.2ms | ActiveRecord: 2.6ms | Allocations: 999)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:33:50 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.3ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:30:50.759014') AND (updated_at <= '2021-06-16 14:33:50.759293') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 3.5ms | Allocations: 932)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:34:25 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:31:25.396957') AND (updated_at <= '2021-06-16 14:34:25.404141') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 753)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:35:42 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:32:42.223494') AND (updated_at <= '2021-06-16 14:35:42.223763') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 753)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:35:43 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:32:44.007265') AND (updated_at <= '2021-06-16 14:35:44.007619') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 753)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:35:45 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:32:45.403999') AND (updated_at <= '2021-06-16 14:35:45.404198') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 752)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:35:46 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:32:46.906418') AND (updated_at <= '2021-06-16 14:35:46.906644') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 752)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:40:34 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.3ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:43:34.527298') AND (updated_at <= '2021-06-16 14:40:34.527519') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.9ms | Allocations: 926)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:40:36 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:43:36.579395') AND (updated_at <= '2021-06-16 14:40:36.579662') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:40:38 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:43:38.722475') AND (updated_at <= '2021-06-16 14:40:38.722701') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:40:40 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:43:40.675374') AND (updated_at <= '2021-06-16 14:40:40.675653') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:40:42 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:43:42.405095') AND (updated_at <= '2021-06-16 14:40:42.405340') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:40:44 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:43:44.178228') AND (updated_at <= '2021-06-16 14:40:44.178457') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:40:46 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:43:46.755487') AND (updated_at <= '2021-06-16 14:40:46.755737') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:40:49 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:43:49.381371') AND (updated_at <= '2021-06-16 14:40:49.381625') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:40:55 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:43:56.040228') AND (updated_at <= '2021-06-16 14:40:56.040472') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:40:57 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:43:57.386719') AND (updated_at <= '2021-06-16 14:40:57.386990') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:41:05 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:44:05.222114') AND (updated_at <= '2021-06-16 14:41:05.222343') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:41:06 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.6ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:44:06.552398') AND (updated_at <= '2021-06-16 14:41:06.552726') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:41:35 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.3ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:44:35.642206') AND (updated_at <= '2021-06-16 14:41:35.642402') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.6ms | Allocations: 1447)
+
+
+  
+NoMethodError (undefined method `to_sql' for nil:NilClass):
+  
+app/controllers/otps_controller.rb:53:in `verify_otp'
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:41:59 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 325)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:47:36 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.3ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:50:36.787069') AND (updated_at <= '2021-06-16 14:47:36.787340') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 927)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:48:21 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.3ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at <= '2021-06-16 14:51:21.392956') AND (updated_at >= '2021-06-16 14:48:21.393219') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 3.1ms | Allocations: 926)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:49:01 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.6ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at <= '2021-06-16 14:52:01.160824') AND (updated_at >= '2021-06-16 14:49:01.161114') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:49:02 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at <= '2021-06-16 14:52:02.555224') AND (updated_at >= '2021-06-16 14:49:02.555446') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:49:03 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at <= '2021-06-16 14:52:03.766906') AND (updated_at >= '2021-06-16 14:49:03.767135') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:49:05 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.6ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at <= '2021-06-16 14:52:05.263978') AND (updated_at >= '2021-06-16 14:49:05.264241') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 748)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:50:11 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.3ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:47:11.417642') AND (updated_at <= '2021-06-16 14:50:11.418035') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 3.0ms | Allocations: 2708)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:50:39 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.7ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:47:39.824659') AND (updated_at <= '2021-06-16 14:50:39.824916') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 762)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:50:42 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:47:42.812685') AND (updated_at <= '2021-06-16 14:50:42.812931') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 762)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:50:51 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:47:51.293689') AND (updated_at <= '2021-06-16 14:50:51.293954') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 762)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:50:55 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:47:55.268442') AND (updated_at <= '2021-06-16 14:50:55.268794') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 762)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:50:57 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:47:57.728786') AND (updated_at <= '2021-06-16 14:50:57.729034') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 762)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:50:59 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:47:59.671012') AND (updated_at <= '2021-06-16 14:50:59.671264') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 763)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:51:02 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:48:02.965198') AND (updated_at <= '2021-06-16 14:51:02.965638') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 762)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:51:45 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.5ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:48:45.543904') AND (updated_at <= '2021-06-16 14:51:45.544158') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 762)
+
+
+Started POST "/verify_otp" for ::1 at 2021-06-16 14:52:05 +0000
+Processing by OtpsController#verify_otp as TEXT
+  Parameters: {"phone"=>"93708315", "code"=>"111111", "otp"=>{"phone"=>"93708315", "code"=>"111111"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? AND "otps"."code" = ? AND (updated_at >= '2021-06-16 14:49:05.582610') AND (updated_at <= '2021-06-16 14:52:05.582853') ORDER BY "otps"."id" ASC LIMIT ?[0m  [["phone", "93708315"], ["code", 111111], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:53:in `verify_otp'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 752)
+
+
+  [1m[35m (58.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLoadings (20210616161735)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "loadings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "taux" decimal, "loaded_amount" decimal, "remaining_amount" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210616161735"]]
+  [1m[36mTRANSACTION (123.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAddActiveToCartes (20210616212122)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "add_active_to_cartes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "active" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210616212122"]]
+  [1m[36mTRANSACTION (157.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCartes (20210616184513)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "cartes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "card_id" varchar, "masked_pan" varchar, "card_balance" decimal, "card_holder" varchar, "card_pan" varchar, "cardcurrency" varchar, "cardbalance" decimal, "billing_name" varchar, "billing_address" varchar, "billing_city" varchar, "billing_country" varchar, "billing_zip_code" varchar, "billing_state" varchar, "card_currency" varchar, "status" varchar, "success" varchar, "zip_code" varchar, "cvv" varchar, "expiration" varchar, "active" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCartes (20210616184513)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE "cartes"[0m
+  [1m[35m (20.8ms)[0m  [1m[35mCREATE TABLE "cartes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "card_id" varchar, "masked_pan" varchar, "card_balance" decimal, "card_holder" varchar, "card_pan" varchar, "cardcurrency" varchar, "cardbalance" decimal, "billing_name" varchar, "billing_address" varchar, "billing_city" varchar, "billing_country" varchar, "billing_zip_code" varchar, "billing_state" varchar, "card_currency" varchar, "status" varchar, "success" varchar, "zip_code" varchar, "cvv" varchar, "expiration" varchar, "active" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210616184513"]]
+  [1m[36mTRANSACTION (139.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (48.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (51.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToUsers (20210617152034)
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToUsers (20210617152034)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToUsers (20210617152034)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210617152034"]]
+  [1m[36mTRANSACTION (109.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (17.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePaiementpaygates (20210617195136)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "paiementpaygates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "tx_reference" varchar, "payment_reference" varchar, "phone" varchar, "date_paiement" datetime, "pmt_done" integer, "fxk_done" integer, "tx_pg" decimal, "tx_fx" decimal, "tx_e_cart" decimal, "info_type_pmt_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210617195136"]]
+  [1m[36mTRANSACTION (151.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateHistoriqueechecs (20210617195311)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "historiqueechecs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "desc_operation" varchar, "info_json" varchar, "pmtpg_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210617195311"]]
+  [1m[36mTRANSACTION (155.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateInfotypes (20210617195409)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (21.2ms)[0m  [1m[35mCREATE TABLE "infotypes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "json" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210617195409"]]
+  [1m[36mTRANSACTION (169.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateNewcards (20210617195814)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "newcards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "pmt_pg_id" integer, "cardholder" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210617195814"]]
+  [1m[36mTRANSACTION (148.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDepots (20210617195951)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "depots" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "pmt_pg_id" integer, "montant_usd" decimal, "card_id" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210617195951"]]
+  [1m[36mTRANSACTION (135.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTypepaiements (20210617200056)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "typepaiements" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "libelle" varchar, "info_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210617200056"]]
+  [1m[36mTRANSACTION (234.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTypepaiement Create (3.0ms)[0m  [1m[32mINSERT INTO "typepaiements" ("libelle", "info_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["libelle", "newcard"], ["info_id", 1], ["created_at", "2021-06-17 20:06:08.460914"], ["updated_at", "2021-06-17 20:06:08.460914"]]
+  [1m[36mTRANSACTION (165.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTypepaiement Create (3.1ms)[0m  [1m[32mINSERT INTO "typepaiements" ("libelle", "info_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["libelle", "depot"], ["info_id", 2], ["created_at", "2021-06-17 20:06:37.378988"], ["updated_at", "2021-06-17 20:06:37.378988"]]
+  [1m[36mTRANSACTION (192.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mInfotype Create (1.8ms)[0m  [1m[32mINSERT INTO "infotypes" ("json", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json", "{\"prix_fcfa\":{\"valeur\": 2000, \"description\": \"le prix de la carte virtuelle en fcfa\"}, \"cout_carte\":{\"valeur\": 2000, \"description\": \"le coût de la carte virtuelle en usd chez FxKudi\"}, \"depot_intial\":{\"valeur\": 1, \"description\": \"le montant initial sur la carte\"} }"], ["created_at", "2021-06-17 20:13:14.691711"], ["updated_at", "2021-06-17 20:13:14.691711"]]
+  [1m[36mTRANSACTION (143.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mInfotype Create (3.5ms)[0m  [1m[32mINSERT INTO "infotypes" ("json", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json", "{\"tx_pg\":{\"valeur\": \"0.04\", \"description\": \"Taux PaygateGlobal prélevé sur chaque montant en fcfa payé\"}, \"tx_fxk\":{\"valeur\": \"0.005\", \"description\": \"Taux FxKudi prélevé sur chaque montant en dollar payé\"}, \"tx_ec\":{\"valeur\": \"0.005\", \"description\": \"Taux E-Carte prélevé sur chaque montant en dollar payé\"} }"], ["created_at", "2021-06-17 20:44:34.506551"], ["updated_at", "2021-06-17 20:44:34.506551"]]
+  [1m[36mTRANSACTION (168.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameSomeColumnToPaiementpaygate (20210617223233)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apaiementpaygates" ("id" integer NOT NULL PRIMARY KEY, "tx_reference" varchar DEFAULT NULL, "payment_reference" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL, "date_paiement" datetime DEFAULT NULL, "pmt_done" integer DEFAULT NULL, "fxk_done" integer DEFAULT NULL, "tx_pg" decimal DEFAULT NULL, "tx_fx" decimal DEFAULT NULL, "tx_ec" decimal DEFAULT NULL, "info_type_pmt_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "apaiementpaygates" ("id","tx_reference","payment_reference","phone","date_paiement","pmt_done","fxk_done","tx_pg","tx_fx","tx_ec","info_type_pmt_id","created_at","updated_at")
+                     SELECT "id","tx_reference","payment_reference","phone","date_paiement","pmt_done","fxk_done","tx_pg","tx_fx","tx_e_cart","info_type_pmt_id","created_at","updated_at" FROM "paiementpaygates"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "paiementpaygates"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "paiementpaygates" ("id" integer NOT NULL PRIMARY KEY, "tx_reference" varchar DEFAULT NULL, "payment_reference" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL, "date_paiement" datetime DEFAULT NULL, "pmt_done" integer DEFAULT NULL, "fxk_done" integer DEFAULT NULL, "tx_pg" decimal DEFAULT NULL, "tx_fx" decimal DEFAULT NULL, "tx_ec" decimal DEFAULT NULL, "info_type_pmt_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("id","tx_reference","payment_reference","phone","date_paiement","pmt_done","fxk_done","tx_pg","tx_fx","tx_ec","info_type_pmt_id","created_at","updated_at")
+                     SELECT "id","tx_reference","payment_reference","phone","date_paiement","pmt_done","fxk_done","tx_pg","tx_fx","tx_ec","info_type_pmt_id","created_at","updated_at" FROM "apaiementpaygates"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "apaiementpaygates"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210617223233"]]
+  [1m[36mTRANSACTION (167.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangesOnPaiementpaygate (20210617223234)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangesOnPaiementpaygate (20210617223234)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangesOnPaiementpaygate (20210617223234)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangesOnPaiementpaygate (20210617223234)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "paiementpaygates" ADD "info_type_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210617223234"]]
+  [1m[36mTRANSACTION (148.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangesOnPaiementpaygate (20210617223235)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apaiementpaygates" ("id" integer NOT NULL PRIMARY KEY, "tx_reference" varchar DEFAULT NULL, "payment_reference" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL, "date_paiement" datetime DEFAULT NULL, "pmt_done" integer DEFAULT NULL, "fxk_done" integer DEFAULT NULL, "tx_pg" decimal DEFAULT NULL, "tx_fx" decimal DEFAULT NULL, "tx_ec" decimal DEFAULT NULL, "info_type_pmt_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "info_type_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "apaiementpaygates" ("id","tx_reference","payment_reference","phone","date_paiement","pmt_done","fxk_done","tx_pg","tx_fx","tx_ec","info_type_pmt_id","created_at","updated_at","info_type_id")
+                     SELECT "id","tx_reference","payment_reference","phone","date_paiement","pmt_done","fxk_done","tx_pg","tx_fx","tx_ec","info_type_pmt_id","created_at","updated_at","info_type_id" FROM "paiementpaygates"[0m
+  [1m[35m (44.1ms)[0m  [1m[35mDROP TABLE "paiementpaygates"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "paiementpaygates" ("id" integer NOT NULL PRIMARY KEY, "tx_reference" varchar DEFAULT NULL, "payment_reference" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL, "date_paiement" datetime DEFAULT NULL, "pmt_done" integer DEFAULT NULL, "fxk_done" integer DEFAULT NULL, "tx_pg" decimal DEFAULT NULL, "tx_fx" decimal DEFAULT NULL, "tx_ec" decimal DEFAULT NULL, "info_type_pmt_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("id","tx_reference","payment_reference","phone","date_paiement","pmt_done","fxk_done","tx_pg","tx_fx","tx_ec","info_type_pmt_id","created_at","updated_at")
+                     SELECT "id","tx_reference","payment_reference","phone","date_paiement","pmt_done","fxk_done","tx_pg","tx_fx","tx_ec","info_type_pmt_id","created_at","updated_at" FROM "apaiementpaygates"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "apaiementpaygates"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "paiementpaygates" ADD "type_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210617223235"]]
+  [1m[36mTRANSACTION (239.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
