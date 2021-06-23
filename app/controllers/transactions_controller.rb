@@ -4,7 +4,7 @@ class TransactionsController < ApplicationController
         debut = params.member? "debut" ? params["debut"] : nil
         fin = params.member? "fin" ? params["fin"] : nil
 
-        tout = Transaction.where("carte_id" : carte_id)
+        tout = Transaction.where("carte_id" => carte_id)
         if debut.nil?
             tout = Transaction.where(["dateCreated >= ?", debut])
         end
