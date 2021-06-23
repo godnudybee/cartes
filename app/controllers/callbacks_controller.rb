@@ -9,7 +9,7 @@ class CallbacksController < ApplicationController
     #    "phone_number": "22897019198"
     #  }
 
-    require 'Callfxkudi'
+    require 'callfxkudi'
     def paygateglobal
         id = params["identifier"]
         dmd = Paiementpaygate.find(id)
