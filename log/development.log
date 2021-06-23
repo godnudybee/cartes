@@ -895,3 +895,1189 @@ Migrating to ChangesOnPaiementpaygate (20210617223235)
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/newcard" for ::1 at 2021-06-18 12:06:14 +0000
+  [1m[35m (16.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:9: syntax error, unexpected ':', expecting ')'
+...rte = Carte.find_by("card_id" : params["card_id"])
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:9: syntax error, unexpected ')', expecting `end'
+...("card_id" : params["card_id"])
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:13: syntax error, unexpected ':', expecting =>
+...       render json: {"status" : 1}
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:27: syntax error, unexpected ':', expecting ')'
+...rte = Carte.find_by("card_id" : params["card_id"])
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:27: syntax error, unexpected ')', expecting `end'
+...("card_id" : params["card_id"])
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:31: syntax error, unexpected ':', expecting =>
+...       render json: {"status" : 1}
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:51: syntax error, unexpected '['
+...    amount_card = l_info_json.["prix_fcfa"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:51: syntax error, unexpected ']', expecting `end'
+...ard = l_info_json.["prix_fcfa"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:61: syntax error, unexpected '['
+...     @pmt.tx_pg = l_info_json.["tx_pg"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:61: syntax error, unexpected ']', expecting `end'
+...t.tx_pg = l_info_json.["tx_pg"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:62: syntax error, unexpected '['
+...     @pmt.tx_fx = l_info_json.["tx_fx"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:62: syntax error, unexpected ']', expecting `end'
+...t.tx_fx = l_info_json.["tx_fx"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:63: syntax error, unexpected '['
+...     @pmt.tx_ec = l_info_json.["tx_ec"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:63: syntax error, unexpected ']', expecting `end'
+...t.tx_ec = l_info_json.["tx_ec"].valeur.to_i
+...                              ^
+):
+  
+app/controllers/fxkudi_controller.rb:9: syntax error, unexpected ':', expecting ')'
+app/controllers/fxkudi_controller.rb:9: syntax error, unexpected ')', expecting `end'
+app/controllers/fxkudi_controller.rb:13: syntax error, unexpected ':', expecting =>
+app/controllers/fxkudi_controller.rb:27: syntax error, unexpected ':', expecting ')'
+app/controllers/fxkudi_controller.rb:27: syntax error, unexpected ')', expecting `end'
+app/controllers/fxkudi_controller.rb:31: syntax error, unexpected ':', expecting =>
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:9: syntax error, unexpected ':', expecting ')'
+app/controllers/fxkudi_controller.rb:9: syntax error, unexpected ')', expecting `end'
+app/controllers/fxkudi_controller.rb:13: syntax error, unexpected ':', expecting =>
+app/controllers/fxkudi_controller.rb:27: syntax error, unexpected ':', expecting ')'
+app/controllers/fxkudi_controller.rb:27: syntax error, unexpected ')', expecting `end'
+app/controllers/fxkudi_controller.rb:31: syntax error, unexpected ':', expecting =>
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected ']', expecting `end'
+Started POST "/newcard" for ::1 at 2021-06-18 12:07:17 +0000
+  
+SyntaxError (c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:13: syntax error, unexpected ':', expecting =>
+...       render json: {"status" : 1}
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:31: syntax error, unexpected ':', expecting =>
+...       render json: {"status" : 1}
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:51: syntax error, unexpected '['
+...    amount_card = l_info_json.["prix_fcfa"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:51: syntax error, unexpected ']', expecting `end'
+...ard = l_info_json.["prix_fcfa"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:61: syntax error, unexpected '['
+...     @pmt.tx_pg = l_info_json.["tx_pg"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:61: syntax error, unexpected ']', expecting `end'
+...t.tx_pg = l_info_json.["tx_pg"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:62: syntax error, unexpected '['
+...     @pmt.tx_fx = l_info_json.["tx_fx"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:62: syntax error, unexpected ']', expecting `end'
+...t.tx_fx = l_info_json.["tx_fx"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:63: syntax error, unexpected '['
+...     @pmt.tx_ec = l_info_json.["tx_ec"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:63: syntax error, unexpected ']', expecting `end'
+...t.tx_ec = l_info_json.["tx_ec"].valeur.to_i
+...                              ^
+):
+  
+app/controllers/fxkudi_controller.rb:13: syntax error, unexpected ':', expecting =>
+app/controllers/fxkudi_controller.rb:31: syntax error, unexpected ':', expecting =>
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:13: syntax error, unexpected ':', expecting =>
+app/controllers/fxkudi_controller.rb:31: syntax error, unexpected ':', expecting =>
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected ']', expecting `end'
+Started POST "/newcard" for ::1 at 2021-06-18 12:09:19 +0000
+  
+SyntaxError (c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:31: syntax error, unexpected ':', expecting =>
+...       render json: {"status" : 1}
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:51: syntax error, unexpected '['
+...    amount_card = l_info_json.["prix_fcfa"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:51: syntax error, unexpected ']', expecting `end'
+...ard = l_info_json.["prix_fcfa"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:61: syntax error, unexpected '['
+...     @pmt.tx_pg = l_info_json.["tx_pg"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:61: syntax error, unexpected ']', expecting `end'
+...t.tx_pg = l_info_json.["tx_pg"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:62: syntax error, unexpected '['
+...     @pmt.tx_fx = l_info_json.["tx_fx"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:62: syntax error, unexpected ']', expecting `end'
+...t.tx_fx = l_info_json.["tx_fx"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:63: syntax error, unexpected '['
+...     @pmt.tx_ec = l_info_json.["tx_ec"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:63: syntax error, unexpected ']', expecting `end'
+...t.tx_ec = l_info_json.["tx_ec"].valeur.to_i
+...                              ^
+):
+  
+app/controllers/fxkudi_controller.rb:31: syntax error, unexpected ':', expecting =>
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:31: syntax error, unexpected ':', expecting =>
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected ']', expecting `end'
+Started POST "/newcard" for ::1 at 2021-06-18 12:10:14 +0000
+  
+SyntaxError (c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:51: syntax error, unexpected '['
+...    amount_card = l_info_json.["prix_fcfa"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:51: syntax error, unexpected ']', expecting `end'
+...ard = l_info_json.["prix_fcfa"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:61: syntax error, unexpected '['
+...     @pmt.tx_pg = l_info_json.["tx_pg"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:61: syntax error, unexpected ']', expecting `end'
+...t.tx_pg = l_info_json.["tx_pg"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:62: syntax error, unexpected '['
+...     @pmt.tx_fx = l_info_json.["tx_fx"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:62: syntax error, unexpected ']', expecting `end'
+...t.tx_fx = l_info_json.["tx_fx"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:63: syntax error, unexpected '['
+...     @pmt.tx_ec = l_info_json.["tx_ec"].valeur.to_i
+...                              ^
+c:/Users/GodNudybee/Documents/GitHub/cartes/app/controllers/fxkudi_controller.rb:63: syntax error, unexpected ']', expecting `end'
+...t.tx_ec = l_info_json.["tx_ec"].valeur.to_i
+...                              ^
+):
+  
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:51: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:61: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:62: syntax error, unexpected ']', expecting `end'
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected '['
+app/controllers/fxkudi_controller.rb:63: syntax error, unexpected ']', expecting `end'
+Started POST "/newcard" for ::1 at 2021-06-18 12:11:02 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.7ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 6.8ms | Allocations: 11761)
+
+
+  
+NoMethodError (undefined method `json' for #<Typepaiement:0x0000000009d8f988>):
+  
+app/controllers/fxkudi_controller.rb:50:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:12:05 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.4ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 5.5ms | Allocations: 6103)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/fxkudi_controller.rb:50:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:12:38 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:50:in `generate_card'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 4.8ms | Allocations: 6109)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/fxkudi_controller.rb:51:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:15:01 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:50:in `generate_card'
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 5.1ms | Allocations: 6103)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/fxkudi_controller.rb:51:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:18:24 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:50:in `generate_card'
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 6.1ms | Allocations: 6083)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/fxkudi_controller.rb:51:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:19:09 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:50:in `generate_card'
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 4.2ms | Allocations: 6234)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/fxkudi_controller.rb:51:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:20:27 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 4.4ms | Allocations: 7243)
+
+
+  
+NoMethodError (undefined method `valeur' for #<Hash:0x000000000a8697f0>
+Did you mean?  values):
+  
+app/controllers/fxkudi_controller.rb:51:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:21:11 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.5ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 5.5ms | Allocations: 7236)
+
+
+  
+NoMethodError (undefined method `valeur' for #<Hash:0x0000000007c1d5e8>
+Did you mean?  values):
+  
+app/controllers/fxkudi_controller.rb:52:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:22:38 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 6.8ms | Allocations: 13453)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/fxkudi_controller.rb:62:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:23:43 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.9ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (3.1ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 12:23:43.512803"], ["updated_at", "2021-06-18 12:23:43.512803"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (152.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 162.8ms | Allocations: 16863)
+
+
+  
+NameError (undefined local variable or method `t' for #<FxkudiController:0x00000000012138>):
+  
+app/controllers/fxkudi_controller.rb:72:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:24:39 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (1.4ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 12:24:39.843047"], ["updated_at", "2021-06-18 12:24:39.843047"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (118.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.5ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 2], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 12:24:40.012581"], ["updated_at", "2021-06-18 12:24:40.012581"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (146.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 500 Internal Server Error in 440ms (ActiveRecord: 280.3ms | Allocations: 20577)
+
+
+  
+NoMethodError (undefined method `demandePaiement' for #<FxkudiController:0x00000000013010>):
+  
+app/controllers/fxkudi_controller.rb:79:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:25:30 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (1.8ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 12:25:30.849901"], ["updated_at", "2021-06-18 12:25:30.849901"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (115.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.5ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 3], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 12:25:31.003802"], ["updated_at", "2021-06-18 12:25:31.003802"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (148.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 500 Internal Server Error in 385ms (ActiveRecord: 277.3ms | Allocations: 20399)
+
+
+  
+NoMethodError (undefined method `include' for #<FxkudiController:0x00000000014398>):
+  
+app/controllers/fxkudi_controller.rb:79:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:25:34 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.6ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (10.7ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 12:25:35.017443"], ["updated_at", "2021-06-18 12:25:35.017443"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (143.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (3.1ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 4], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 12:25:35.189239"], ["updated_at", "2021-06-18 12:25:35.189239"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (120.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 500 Internal Server Error in 339ms (ActiveRecord: 279.6ms | Allocations: 6616)
+
+
+  
+NoMethodError (undefined method `include' for #<FxkudiController:0x00000000014460>):
+  
+app/controllers/fxkudi_controller.rb:79:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:26:29 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.4ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (1.4ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 12:26:29.895597"], ["updated_at", "2021-06-18 12:26:29.895597"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (137.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.5ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 5], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 12:26:30.052157"], ["updated_at", "2021-06-18 12:26:30.052157"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (148.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 500 Internal Server Error in 382ms (ActiveRecord: 296.1ms | Allocations: 19497)
+
+
+  
+NoMethodError (undefined method `demandePaiement' for Paygateglobal:Module):
+  
+app/controllers/fxkudi_controller.rb:79:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:43:30 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+Completed 500 Internal Server Error in 12ms (Allocations: 125)
+
+
+  
+LoadError (cannot load such file -- lib/paygateglobal):
+  
+app/controllers/fxkudi_controller.rb:46:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:43:50 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.5ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (1.5ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 12:43:50.301449"], ["updated_at", "2021-06-18 12:43:50.301449"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (135.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.7ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 6], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 12:43:50.458949"], ["updated_at", "2021-06-18 12:43:50.458949"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (137.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 500 Internal Server Error in 367ms (ActiveRecord: 278.2ms | Allocations: 17772)
+
+
+  
+NoMethodError (undefined method `demandePaiement' for Paygateglobal:Module):
+  
+app/controllers/fxkudi_controller.rb:79:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:44:53 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.4ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (1.4ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 12:44:53.776937"], ["updated_at", "2021-06-18 12:44:53.776937"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (120.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.5ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 7], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 12:44:53.923263"], ["updated_at", "2021-06-18 12:44:53.923263"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (126.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 500 Internal Server Error in 361ms (ActiveRecord: 258.8ms | Allocations: 20394)
+
+
+  
+NoMethodError (undefined method `include' for #<FxkudiController:0x00000000017fc0>):
+  
+app/controllers/fxkudi_controller.rb:79:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:57:41 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.5ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.4ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (4.9ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 12:57:41.113269"], ["updated_at", "2021-06-18 12:57:41.113269"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (151.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (5.0ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 8], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 12:57:41.283868"], ["updated_at", "2021-06-18 12:57:41.283868"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (133.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 500 Internal Server Error in 355ms (ActiveRecord: 297.8ms | Allocations: 7079)
+
+
+  
+NoMethodError (undefined method `include' for #<FxkudiController:0x00000000018088>):
+  
+app/controllers/fxkudi_controller.rb:79:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 12:58:57 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (2.2ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (22.3ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 12:58:57.812942"], ["updated_at", "2021-06-18 12:58:57.812942"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (131.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.9ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 9], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 12:58:57.984634"], ["updated_at", "2021-06-18 12:58:57.984634"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (139.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 500 Internal Server Error in 347ms (ActiveRecord: 298.5ms | Allocations: 6609)
+
+
+  
+NoMethodError (undefined method `include' for #<FxkudiController:0x00000000018178>):
+  
+app/controllers/fxkudi_controller.rb:79:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 13:00:06 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.5ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.5ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.8ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (2.1ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:00:07.081716"], ["updated_at", "2021-06-18 13:00:07.081716"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (128.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (3.0ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 10], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:00:07.241032"], ["updated_at", "2021-06-18 13:00:07.241032"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (136.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 500 Internal Server Error in 406ms (ActiveRecord: 280.9ms | Allocations: 19431)
+
+
+  
+NoMethodError (undefined method `demandePaiement' for Paygateglobal:Module):
+  
+app/controllers/fxkudi_controller.rb:79:in `generate_card'
+Started POST "/newcard" for ::1 at 2021-06-18 13:00:31 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.4ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (1.8ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:00:31.382432"], ["updated_at", "2021-06-18 13:00:31.382432"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (127.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.7ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 11], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:00:31.534294"], ["updated_at", "2021-06-18 13:00:31.534294"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (134.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 204 No Content in 1487ms (ActiveRecord: 274.8ms | Allocations: 23861)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:01:51 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22897936820", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22897936820", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.4ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (20.1ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22897936820"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:01:51.620647"], ["updated_at", "2021-06-18 13:01:51.620647"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (108.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.7ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 12], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:01:51.760174"], ["updated_at", "2021-06-18 13:01:51.760174"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (129.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 204 No Content in 1210ms (ActiveRecord: 261.8ms | Allocations: 5688)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:06:19 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22897936820", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22897936820", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.5ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (1.6ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22897936820"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:06:20.253225"], ["updated_at", "2021-06-18 13:06:20.253225"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (129.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.5ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 13], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:06:20.417537"], ["updated_at", "2021-06-18 13:06:20.417537"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (133.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 204 No Content in 1219ms (ActiveRecord: 277.1ms | Allocations: 19534)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:06:35 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"97936820", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"97936820", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (3.3ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "97936820"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:06:35.432274"], ["updated_at", "2021-06-18 13:06:35.432274"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (109.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.8ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 14], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:06:35.556071"], ["updated_at", "2021-06-18 13:06:35.556071"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (130.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 204 No Content in 1124ms (ActiveRecord: 245.7ms | Allocations: 5645)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:06:49 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"96644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"96644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.5ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (1.4ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "96644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:06:49.493834"], ["updated_at", "2021-06-18 13:06:49.493834"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (116.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (2.4ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 15], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:06:49.627520"], ["updated_at", "2021-06-18 13:06:49.627520"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (127.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 204 No Content in 1196ms (ActiveRecord: 249.8ms | Allocations: 5685)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:06:57 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"96644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"96644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.5ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (19.9ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "96644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:06:58.027548"], ["updated_at", "2021-06-18 13:06:58.027548"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (117.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (3.6ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 16], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:06:58.182289"], ["updated_at", "2021-06-18 13:06:58.182289"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (177.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 204 No Content in 1200ms (ActiveRecord: 320.2ms | Allocations: 5694)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:07:08 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (10.1ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:07:09.037642"], ["updated_at", "2021-06-18 13:07:09.037642"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (108.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.6ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 17], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:07:09.168728"], ["updated_at", "2021-06-18 13:07:09.168728"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (129.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 204 No Content in 1131ms (ActiveRecord: 250.9ms | Allocations: 5644)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:12:45 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.4ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (8.7ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:12:45.711214"], ["updated_at", "2021-06-18 13:12:45.711214"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (142.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.5ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 18], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:12:45.871158"], ["updated_at", "2021-06-18 13:12:45.871158"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (143.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 204 No Content in 1216ms (ActiveRecord: 298.7ms | Allocations: 6146)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:14:45 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"228994674", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"228994674", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.7ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (1.9ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "228994674"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:14:46.166114"], ["updated_at", "2021-06-18 13:14:46.166114"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (159.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.7ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 19], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:14:46.349852"], ["updated_at", "2021-06-18 13:14:46.349852"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (142.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 200 OK in 1678ms (Views: 0.5ms | ActiveRecord: 313.7ms | Allocations: 19584)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:15:59 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22899467450", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22899467450", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (17.8ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22899467450"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:15:59.714615"], ["updated_at", "2021-06-18 13:15:59.714615"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (130.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mNewcard Create (1.6ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 20], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:15:59.874699"], ["updated_at", "2021-06-18 13:15:59.874699"]]
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+  [1m[36mTRANSACTION (143.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:76:in `generate_card'
+Completed 200 OK in 1172ms (Views: 0.2ms | ActiveRecord: 295.4ms | Allocations: 5731)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:16:53 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22899467450", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22899467450", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (1.7ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22899467450"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:16:53.670599"], ["updated_at", "2021-06-18 13:16:53.670599"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (128.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+  [1m[36mNewcard Create (1.5ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 21], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:16:53.826204"], ["updated_at", "2021-06-18 13:16:53.826204"]]
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+  [1m[36mTRANSACTION (112.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+Completed 200 OK in 1220ms (Views: 0.2ms | ActiveRecord: 254.1ms | Allocations: 19499)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:18:02 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22899467450", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22899467450", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (1.7ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22899467450"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:18:03.034498"], ["updated_at", "2021-06-18 13:18:03.034498"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (118.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+  [1m[36mNewcard Create (1.6ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 22], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:18:03.166297"], ["updated_at", "2021-06-18 13:18:03.166297"]]
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+  [1m[36mTRANSACTION (144.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+Completed 200 OK in 1163ms (Views: 0.2ms | ActiveRecord: 268.0ms | Allocations: 5744)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:21:24 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22899467450", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22899467450", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (1.4ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22899467450"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:21:25.033007"], ["updated_at", "2021-06-18 13:21:25.033007"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (121.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+  [1m[36mNewcard Create (2.1ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", -1977], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:21:25.179967"], ["updated_at", "2021-06-18 13:21:25.179967"]]
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+  [1m[36mTRANSACTION (138.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+Completed 200 OK in 1436ms (Views: 0.2ms | ActiveRecord: 273.4ms | Allocations: 19525)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:22:29 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (1.5ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:22:29.850011"], ["updated_at", "2021-06-18 13:22:29.850011"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (131.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+  [1m[36mNewcard Create (2.0ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", -1976], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:22:29.992339"], ["updated_at", "2021-06-18 13:22:29.992339"]]
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+  [1m[36mTRANSACTION (152.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+Completed 200 OK in 1262ms (Views: 0.2ms | ActiveRecord: 288.5ms | Allocations: 5732)
+
+
+Started POST "/newcard" for ::1 at 2021-06-18 13:22:52 +0000
+Processing by FxkudiController#generate_card as TEXT
+  Parameters: {"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"user_id"=>"1", "phone"=>"22896644879", "cardholder"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:48:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:49:in `generate_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:58:in `generate_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:59:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mPaiementpaygate Create (2.0ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 1], ["created_at", "2021-06-18 13:22:52.979237"], ["updated_at", "2021-06-18 13:22:52.979237"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (122.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:69:in `generate_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+  [1m[36mNewcard Create (1.6ms)[0m  [1m[32mINSERT INTO "newcards" ("pmt_pg_id", "cardholder", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 25], ["cardholder", "BONIN Koffivi Nutepe"], ["user_id", 1], ["created_at", "2021-06-18 13:22:53.124978"], ["updated_at", "2021-06-18 13:22:53.124978"]]
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+  [1m[36mTRANSACTION (142.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:77:in `generate_card'
+Completed 200 OK in 1517ms (Views: 0.4ms | ActiveRecord: 275.9ms | Allocations: 19518)
+
+
+Started POST "/fund_card" for ::1 at 2021-06-18 16:45:39 +0000
+  
+Zeitwerk::NameError (expected file c:/Users/GodNudybee/Documents/GitHub/cartes/lib/tauxchange.rb to define constant Tauxchange, but didn't):
+  
+app/controllers/fxkudi_controller.rb:6:in `<main>'
+Started POST "/fund_card" for ::1 at 2021-06-18 16:46:14 +0000
+Processing by FxkudiController#fund_card as TEXT
+  Parameters: {"amount"=>"150", "phone"=>"22896644879", "card_id"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"amount"=>"150", "phone"=>"22896644879", "card_id"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:100:in `fund_card'
+  [1m[36mTypepaiement Load (0.5ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:100:in `fund_card'
+  [1m[36mInfotype Load (0.4ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:101:in `fund_card'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.0ms | Allocations: 5845)
+
+
+  
+NoMethodError (undefined method `tx_pg=' for nil:NilClass):
+  
+app/controllers/fxkudi_controller.rb:104:in `fund_card'
+Started POST "/fund_card" for ::1 at 2021-06-18 16:46:59 +0000
+Processing by FxkudiController#fund_card as TEXT
+  Parameters: {"amount"=>"150", "phone"=>"22896644879", "card_id"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"amount"=>"150", "phone"=>"22896644879", "card_id"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:100:in `fund_card'
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:100:in `fund_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:101:in `fund_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:117:in `fund_card'
+  [1m[36mPaiementpaygate Create (1.4ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 2], ["created_at", "2021-06-18 16:46:59.975875"], ["updated_at", "2021-06-18 16:46:59.975875"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:117:in `fund_card'
+  [1m[36mTRANSACTION (148.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:117:in `fund_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:125:in `fund_card'
+  [1m[36mDepot Create (1.6ms)[0m  [1m[32mINSERT INTO "depots" ("pmt_pg_id", "montant_usd", "card_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 26], ["montant_usd", 150.0], ["card_id", "BONIN Koffivi Nutepe"], ["created_at", "2021-06-18 16:47:00.148858"], ["updated_at", "2021-06-18 16:47:00.148858"]]
+  ↳ app/controllers/fxkudi_controller.rb:125:in `fund_card'
+  [1m[36mTRANSACTION (155.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:125:in `fund_card'
+Completed 200 OK in 1661ms (Views: 0.2ms | ActiveRecord: 313.7ms | Allocations: 18791)
+
+
+  [1m[35m (16.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToUser (20210622210304)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (20.4ms)[0m  [1m[35mALTER TABLE "users" ADD "document_url" varchar[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "users" ADD "piece_url" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210622210304"]]
+  [1m[36mTRANSACTION (104.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (29.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnsToUser (20210622230304)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangesColumnsToUser (20210622230304)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangesColumnsToUser (20210622230304)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "phone" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "document_url" varchar DEFAULT NULL, "photo_url" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "ausers" ("id","phone","password_digest","created_at","updated_at","name","email","document_url","photo_url")
+                     SELECT "id","phone","password_digest","created_at","updated_at","name","email","document_url","piece_url" FROM "users"[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "phone" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "document_url" varchar DEFAULT NULL, "photo_url" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","phone","password_digest","created_at","updated_at","name","email","document_url","photo_url")
+                     SELECT "id","phone","password_digest","created_at","updated_at","name","email","document_url","photo_url" FROM "ausers"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210622230304"]]
+  [1m[36mTRANSACTION (135.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

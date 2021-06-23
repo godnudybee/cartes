@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_17_223235) do
+ActiveRecord::Schema.define(version: 2021_06_22_230304) do
 
   create_table "add_active_to_cartes", force: :cascade do |t|
     t.integer "active"
@@ -157,6 +157,8 @@ ActiveRecord::Schema.define(version: 2021_06_17_223235) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.string "email"
+    t.string "document_url"
+    t.string "photo_url"
   end
 
 end
