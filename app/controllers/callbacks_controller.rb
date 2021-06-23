@@ -29,8 +29,7 @@ class CallbacksController < ApplicationController
         dmd.pmt_done = 1
         dmd.fxk_done = 0
         #---------------------------------
-        case (type.id)
-        when TYPE_NEWCARD :
+        if type.id == TYPE_NEWCARD
             newCard = Newcard.find_by(pmt_pg_id: id)
             if newCard.nil? || type.nil?
                 render json: 0
@@ -67,7 +66,7 @@ class CallbacksController < ApplicationController
                 carte.save
             end
 
-        when TYPE_DEPOT :
+        elsif type.id == TYPE_DEPOT 
             depot = Depot.find_by(pmt_pg_id: id)
             if depot.nil? || type.nil?
                 render json:0
