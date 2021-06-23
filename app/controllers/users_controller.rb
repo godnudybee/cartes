@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    require 'Savingimages'
+    require 'savingimages'
     
     def verify_credentials
         #{
@@ -12,6 +12,26 @@ class UsersController < ApplicationController
             good = 0
         else 
             good = @user.password_digest == params["password_digest"] ? @user.id : 0            
+        end
+
+        render json: good
+    end    
+
+    def new_pass
+        #{
+        #    "phone" : "22891367306"
+        #    "oldpass": "fdfdfd",
+        #    "newpass": "togovabien"
+        #}
+
+        @user = User.find_by(phone: params["phone"])
+        if @user.nil?
+            good = 0
+        else 
+            good = @user.password_digest == params["oldpass"] ? @user.id : 0            
+        end
+        if good > 0
+            @user.password_digest = params["newpass"]
         end
 
         render json: good
@@ -50,4 +70,6 @@ class UsersController < ApplicationController
 
         render json: {"status": 0, "message": "le compte n'a pas pu être créé"}
     end
+
+
 end
