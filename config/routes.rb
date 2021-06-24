@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   post 'fund_card', to: 'fxkudi#fund_card'
 
   post 'paygateglobal', to: 'callbacks#paygateglobal'
+
+  post 'init_data', to: 't#init_data'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

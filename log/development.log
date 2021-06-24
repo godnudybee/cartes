@@ -2081,3 +2081,66 @@ Migrating to ChangesColumnsToUser (20210622230304)
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/fund_card" for ::1 at 2021-06-24 00:19:51 +0000
+  [1m[35m (61.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FxkudiController#fund_card as TEXT
+  Parameters: {"amount"=>"150", "phone"=>"22896644879", "card_id"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"amount"=>"150", "phone"=>"22896644879", "card_id"=>"BONIN Koffivi Nutepe"}}
+  [1m[36mTypepaiement Load (0.3ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:100:in `fund_card'
+  [1m[36mInfotype Load (0.2ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:101:in `fund_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:117:in `fund_card'
+  [1m[36mPaiementpaygate Create (1.6ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 2], ["created_at", "2021-06-24 00:19:55.931695"], ["updated_at", "2021-06-24 00:19:55.931695"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:117:in `fund_card'
+  [1m[36mTRANSACTION (129.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:117:in `fund_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:125:in `fund_card'
+  [1m[36mDepot Create (1.6ms)[0m  [1m[32mINSERT INTO "depots" ("pmt_pg_id", "montant_usd", "card_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 27], ["montant_usd", 150.0], ["card_id", "BONIN Koffivi Nutepe"], ["created_at", "2021-06-24 00:19:56.098250"], ["updated_at", "2021-06-24 00:19:56.098250"]]
+  ↳ app/controllers/fxkudi_controller.rb:125:in `fund_card'
+  [1m[36mTRANSACTION (185.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:125:in `fund_card'
+Completed 200 OK in 2359ms (Views: 0.4ms | ActiveRecord: 323.7ms | Allocations: 26770)
+
+
+Started POST "/fund_card" for ::1 at 2021-06-24 00:35:08 +0000
+Processing by FxkudiController#fund_card as TEXT
+  Parameters: {"amount"=>"150", "phone"=>"22896644879", "card_id"=>"BONIN Koffivi Nutepe", "fxkudi"=>{"amount"=>"150", "phone"=>"22896644879", "card_id"=>"BONIN Koffivi Nutepe"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/fxkudi_controller.rb:100:in `fund_card'
+  [1m[36mTypepaiement Load (0.4ms)[0m  [1m[34mSELECT "typepaiements".* FROM "typepaiements" WHERE "typepaiements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:100:in `fund_card'
+  [1m[36mInfotype Load (0.3ms)[0m  [1m[34mSELECT "infotypes".* FROM "infotypes" WHERE "infotypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/fxkudi_controller.rb:101:in `fund_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:117:in `fund_card'
+  [1m[36mPaiementpaygate Create (1.5ms)[0m  [1m[32mINSERT INTO "paiementpaygates" ("phone", "pmt_done", "fxk_done", "tx_pg", "tx_fx", "tx_ec", "info_type_pmt_id", "created_at", "updated_at", "type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["phone", "22896644879"], ["pmt_done", 0], ["fxk_done", 0], ["tx_pg", 0.0], ["tx_fx", 0.0], ["tx_ec", 0.0], ["info_type_pmt_id", 2], ["created_at", "2021-06-24 00:35:08.755435"], ["updated_at", "2021-06-24 00:35:08.755435"], ["type_id", 2]]
+  ↳ app/controllers/fxkudi_controller.rb:117:in `fund_card'
+  [1m[36mTRANSACTION (110.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:117:in `fund_card'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:125:in `fund_card'
+  [1m[36mDepot Create (1.8ms)[0m  [1m[32mINSERT INTO "depots" ("pmt_pg_id", "montant_usd", "card_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["pmt_pg_id", 28], ["montant_usd", 150.0], ["card_id", "BONIN Koffivi Nutepe"], ["created_at", "2021-06-24 00:35:08.881529"], ["updated_at", "2021-06-24 00:35:08.881529"]]
+  ↳ app/controllers/fxkudi_controller.rb:125:in `fund_card'
+  [1m[36mTRANSACTION (131.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fxkudi_controller.rb:125:in `fund_card'
+Completed 200 OK in 1559ms (Views: 0.4ms | ActiveRecord: 246.4ms | Allocations: 5427)
+
+
+Started POST "/envoi_otp" for ::1 at 2021-06-24 11:24:07 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OtpsController#envoi_otp as TEXT
+  Parameters: {"phone"=>"22896644879", "otp"=>{"phone"=>"22896644879"}}
+  [1m[36mOtp Load (0.4ms)[0m  [1m[34mSELECT "otps".* FROM "otps" WHERE "otps"."phone" = ? LIMIT ?[0m  [["phone", "22896644879"], ["LIMIT", 1]]
+  ↳ app/controllers/otps_controller.rb:32:in `envoi_otp'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/otps_controller.rb:40:in `envoi_otp'
+  [1m[36mOtp Create (1.5ms)[0m  [1m[32mINSERT INTO "otps" ("phone", "code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["phone", "22896644879"], ["code", 450470], ["created_at", "2021-06-24 11:24:08.117169"], ["updated_at", "2021-06-24 11:24:08.117169"]]
+  ↳ app/controllers/otps_controller.rb:40:in `envoi_otp'
+  [1m[36mTRANSACTION (107.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/otps_controller.rb:40:in `envoi_otp'
+Completed 200 OK in 3011ms (Views: 1.5ms | ActiveRecord: 111.6ms | Allocations: 4532)
+
+
